@@ -158,7 +158,7 @@ function populateDropdown() {
     <option value="Double chocolate">Double chocolate</option>
                         `;
     for (let i = 0; i < 6; i++)
-        dropdownContainer[i].innerHTML = dynamicContent;
+        dropdownContainer[i].innerHTML = dynamicContent; //dynamically populating HTML content within the container for each product card
 }
 
 document.addEventListener('DOMContentLoaded', function () { //runs after page content has loaded
