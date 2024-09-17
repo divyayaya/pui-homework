@@ -114,24 +114,24 @@ function pushToCart(index) {
 }
 
 function updateCartStatus(number, total) {
-    const cartValue = document.getElementById('cart-status');
+    const cartStatus = document.getElementById('cart-status');
     const dynamicContent = `
     <h4 id="number-of-items">${number} items</h4>
     <h5 id="total-cart-value">Total: $${total.toFixed(2)}</h5>
     `;
 
-    cartValue.innerHTML = dynamicContent; //dynamically populating HTML content within the container
+    cartStatus.innerHTML = dynamicContent; //dynamically populating HTML content within the container
 }
 
 function displayPopup(rollType, glazing, packSize, totalPrice) {
     const popupContainer = document.getElementById('popup');
     const dynamicContent = `
         <div id="prompt">
-            <h3>Added to cart:</h2>
-            <h2 id="roll-type">${rollType}</h3>
-            <h3 id="glaze">${glazing} glazing</h2>
-            <h3 id="pack">Pack of ${packSize}</h2>
-            <h3 id="pricing">Price: $${totalPrice.toFixed(2)}</h2>
+            <h3>Added to cart:</h3>
+            <h2 id="roll-type">${rollType}</h2>
+            <h3 id="glaze">${glazing} glazing</h3>
+            <h3 id="pack">Pack of ${packSize}</h3>
+            <h3 id="pricing">Price: $${totalPrice.toFixed(2)}</h3>
         </div>
         `;
 
@@ -157,7 +157,7 @@ function populateDropdown() {
     <option value="Vanilla milk">Vanilla milk</option>
     <option value="Double chocolate">Double chocolate</option>
                         `;
-    for (let i = 0; i < 6; i++)
+    for (let i = 0; i < Rolls.length; i++)
         dropdownContainer[i].innerHTML = dynamicContent; //dynamically populating HTML content within the container for each product card
 }
 
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () { //runs after page co
     packs.forEach(radio => {
         radio.addEventListener('change', function () {
             getAllSelectedOptions(); //update the arrays of selected options
-            for (let i = 0; i < 6; i++) {
+            for (let i = 0; i < Rolls.length; i++) {
                 Rolls[i].totalPrice = Rolls[i].price; //initializing the total price to base price
                 Rolls[i].packSize = packSelection[i]; //updating packSize attribute of the Rolls object with selection
                 Rolls[i].glazing = glazingSelection[i]; //updating glazing attribute of the Rolls object with selection
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function () { //runs after page co
     //adding an event listener for when an 'Add to Cart' button is clicked
     addToCart.forEach(button => {
         button.addEventListener('click', function () {
-            const productNumber = this.getAttribute('data-index'); //retrieving the product card where interaction took place using its unique index
+            const productNumber = parseInt(this.getAttribute('data-index')); //retrieving the product card where interaction took place using its unique index
             pushToCart(productNumber); // Pushing the product to cart
         });
     });

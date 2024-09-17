@@ -20,6 +20,11 @@ li:hover {
     font-weight: bold;
 }
 
+a {
+    text-decoration: none;
+    color: black
+}
+
 #logo {
     width: 400px;
     height: 200px;
@@ -136,8 +141,18 @@ nav {
 
 }
 
-.pack-size {
-    margin: 0px 9px 0px 0px;
+#pack-size-1,
+#pack-size-2,
+#pack-size-3,
+#pack-size-4,
+#pack-size-5,
+#pack-size-6 {
+    border: none;
+    display: inline-block;
+    font-size: small;
+    padding: 0px 9px 0px 0px;
+    margin: 0px;
+    width: 60px;
 }
 
 .row-2 label {
@@ -188,7 +203,7 @@ h3 {
 }
 
 #popup.visible {
-    /*makes popup is visble after adding to cart*/
+    /*makes popup visble after adding to cart*/
     opacity: 1;
 
 }
