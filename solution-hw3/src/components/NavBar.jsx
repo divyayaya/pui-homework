@@ -6,7 +6,7 @@ function NavBar() {
       <span id="logo-span">
         <img
           id="logo"
-          src="/images/logo/logo-01.svg"
+          src="images/logo/logo-01.svg"
           alt="Logo of the Bun Bun bake shop"
         />
       </span>
