@@ -1,0 +1,161 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  float: right;
+  list-style-type: none;
+}
+
+li {
+  float: left;
+  margin: 0px 30px;
+  font-weight: lighter;
+  font-size: x-large;
+}
+
+li:hover {
+  /* color changes on hover for Products and Cart */
+  background-color: #fbff01;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#logo {
+  width: 400px;
+  height: 200px;
+}
+
+#motto {
+  width: 800px;
+}
+
+#motto h1 {
+  font-weight: lighter;
+  padding: 20px;
+  margin: 30px;
+}
+
+.heading {
+  width: 750px;
+  height: 100px;
+  display: inline-block;
+}
+
+nav {
+  width: 800px;
+  height: 50px;
+  border-bottom: 3px solid;
+  padding: 20px;
+}
+
+.product-catalog {
+  margin: 50px;
+}
+
+.product-image img {
+  width: 200px;
+  border: solid 2px;
+  margin: 60px 0px 0px 0px;
+}
+
+.product-card {
+  display: inline-block;
+  width: 300px;
+  margin: 10px 20px;
+  padding: 0px 0px 0px 60px;
+}
+
+.product-card h1 {
+  font-size: medium;
+  width: 200px;
+  height: 20px;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 10px 0px;
+}
+
+.product-card label {
+  font-weight: lighter;
+  font-size: small;
+}
+
+.product-card input {
+  margin: 0px 0px 0px 18px;
+}
+
+.product-card .price {
+  font-weight: bold;
+  font-size: medium;
+}
+
+.product-card button {
+  margin: 10px 0px 0px 28px;
+  padding: 0px;
+  width: 135px;
+  height: 30px;
+  font-weight: bold;
+  border: solid 1px;
+  background-color: white;
+}
+
+.product-card button:hover {
+  /* Add to Cart button becomes yellow on hover */
+  background-color: #fbff01;
+  font-weight: bold;
+}
+
+.product-card .glazing {
+  margin: 0px 0px 0px 20px;
+  padding: 0px;
+  width: 133px;
+  height: 20px;
+}
+
+#glazing-options {
+  width: 133px;
+  margin: 10px 10px 0px 18px;
+}
+
+.row-1,
+.row-2,
+.row-3 {
+  margin: 10px 0px 0px 0px;
+}
+
+#pack-size-1,
+#pack-size-2,
+#pack-size-3,
+#pack-size-4,
+#pack-size-5,
+#pack-size-6 {
+  border: none;
+  display: inline-block;
+  font-size: small;
+  padding: 0px 9px 0px 0px;
+  margin: 0px;
+  width: 60px;
+}
+
+.row-2 label {
+  /* Boxes generated around different labels for pack size */
+  display: inline-block;
+  font-size: x-small;
+  width: 8px;
+  height: 8px;
+  padding: 5px;
+  border: solid 1px;
+  margin: 10px 18px 0px 0px;
+}
+.row-2 input {
+  /* typical round radio buttons are not generated */
+  display: none;
+}
+
+.row-2 input:checked + label {
+  /* changing the background color to grey when an the pack size is selected */
+  background-color: rgb(191, 191, 191);
+}
