@@ -123,10 +123,15 @@ const Roll = ({
             id="glazing-options"
             onChange={handleGlazingChange}
           >
-            <option value="Keep original">Keep original</option>
-            <option value="Sugar milk">Sugar milk</option>
-            <option value="Vanilla milk">Vanilla milk</option>
-            <option value="Double chocolate">Double chocolate</option>
+            {/* dynamically populating dropdown menu */}
+            {/*“Source: [React] - How to use the map method in React.” 
+            Accessed: Sep. 29, 2024. [Online]. 
+            Available: https://www.shecodes.io/athena/7184-how-to-use-the-map-method-in-react */}
+            {glazingOptions.map((option) => (
+              <option key={option.label} value={option.label}>
+                {option.label}
+              </option>
+            ))}
           </select>
         </div>
         <div className="row-2">
