@@ -20,6 +20,7 @@ function NavBar({ numberOfItems, totalCartPrice }) {
               <a href="#">CART</a>
             </li>
           </ul>
+          {/* displaying cart status */}
           <div id="cart-status">
             <h2 id="number-of-items">{numberOfItems} Item</h2>
             <h3 id="total-cart-value">Total: ${totalCartPrice.toFixed(2)}</h3>

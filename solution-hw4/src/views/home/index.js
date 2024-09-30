@@ -5,15 +5,15 @@ import Roll from "../../components/Roll.jsx";
 const HomePage = () => {
   const [numberOfItems, setNumberOfItems] = useState(0);
   const [totalCartPrice, setTotalCartPrice] = useState(0);
-  const cart = [];
+  const cart = []; //list to store cart items
 
   const updateCartStatus = (itemPrice) => {
-    setNumberOfItems(numberOfItems + 1); // Increment number of items in the cart
-    setTotalCartPrice(totalCartPrice + itemPrice); // Add the item price to the total cart price
+    setNumberOfItems(numberOfItems + 1); //incrementing number of items in the cart
+    setTotalCartPrice(totalCartPrice + itemPrice); //adding item price to get total cart value
   };
   return (
     <>
-      {/* Creating product catalog with 6 different product cards */}
+      {/* passing numberOfItems and totalCartPrice as props to Navbar to display cart status  */}
       <NavBar numberOfItems={numberOfItems} totalCartPrice={totalCartPrice} />
       <Roll
         imageSource="images/products/original-cinnamon-roll.jpg"
@@ -24,7 +24,7 @@ const HomePage = () => {
         packSizeSet="1st"
         buttonIndex={0}
         priceLabelId="1"
-        updateCartStatus={updateCartStatus}
+        updateCartStatus={updateCartStatus} //passing a method across components
         cart={cart}
       />
       <Roll

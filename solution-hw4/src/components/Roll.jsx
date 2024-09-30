@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "../styles/styles.css";
 import { useState } from "react";
 
-/* component Roll has the following props */
+//component Roll has the following props
 const Roll = ({
   imageSource,
   imageAltText,
@@ -18,8 +18,10 @@ const Roll = ({
 }) => {
   const [glazing, setGlazing] = useState("Keep original");
   const [packSize, setPackSize] = useState(1);
-  const [totalPrice, setTotalPrice] = useState(0.0);
+  const basePrice = rollPrice;
+  const [totalPrice, setTotalPrice] = useState(basePrice);
 
+  //storing price change for glazing options
   const glazingOptions = [
     { label: "Keep original", priceChange: 0 },
     { label: "Sugar milk", priceChange: 0 },
@@ -27,6 +29,7 @@ const Roll = ({
     { label: "Double chocolate", priceChange: 1.5 },
   ];
 
+  //storing price multipliers for pack size options
   const packSizeOptions = [
     { size: 1, multiplier: 1 },
     { size: 3, multiplier: 3 },
@@ -34,45 +37,47 @@ const Roll = ({
     { size: 12, multiplier: 10 },
   ];
 
+  //event handler for when glazing option is changed
   const handleGlazingChange = (event) => {
     const selectedGlazing = glazingOptions.find(
       (option) => option.label === event.target.value
     );
     setGlazing(selectedGlazing.label);
-    console.log(packSize);
-    updatePrice(selectedGlazing.priceChange, packSize);
+    updatePrice(selectedGlazing.priceChange, packSize); //calculating price change for selected glazing
   };
 
+  //event handler for when pack size option is changed
   const handlePackSizeChange = (event) => {
     const selectedPack = parseInt(event.target.value);
-    console.log(selectedPack);
     setPackSize(selectedPack);
     const selectedGlazing = glazingOptions.find(
       (option) => option.label === glazing
     );
+    //calculating price multiplier for selected pack size
     updatePrice(
       selectedGlazing.priceChange,
       packSizeOptions.find((option) => option.size === selectedPack).multiplier
     );
   };
 
+  //calculating price of selected roll configuration based on the formula
   const updatePrice = (glazingPrice, packMultiplier) => {
     const basePrice = rollPrice;
     const newPrice = (basePrice + glazingPrice) * packMultiplier;
     const priceLabel = document.getElementById(`price-label-${priceLabelId}`);
     setTotalPrice(newPrice);
-    priceLabel.textContent = `$ ${newPrice.toFixed(2)}`; //dyamically updating the price label of each product card
-    console.log(newPrice);
+    priceLabel.textContent = `$ ${newPrice.toFixed(2)}`; //dyamically updating the price label of each Roll card
   };
 
+  //event handler for when 'Add to Cart' button is clicked
   const handleAddToCart = () => {
     pushToCart(rollType, glazing, packSize, totalPrice);
-    console.log(rollType);
   };
+
   function pushToCart(type, glaze, pack, price) {
     displayPopup(type, glaze, pack, price);
     updateCartStatus(price);
-    cart.push({ type, glaze, pack, price });
+    cart.push({ type, glaze, pack, price }); //pushing the Roll configuration to a list storing cart items
   }
 
   function displayPopup(rollType, glazing, packSize, totalPrice) {
@@ -100,17 +105,6 @@ const Roll = ({
     }, 3000);
   }
 
-  function populateDropdown() {
-    const dropdownContainer = document.getElementsByClassName("glazing");
-    const dynamicContent = `
-    <option value="Keep original">Keep original</option>
-    <option value="Sugar milk">Sugar milk</option>
-    <option value="Vanilla milk">Vanilla milk</option>
-    <option value="Double chocolate">Double chocolate</option>
-                        `;
-    for (let i = 0; i < 6; i++) dropdownContainer[i].innerHTML = dynamicContent; //dynamically populating HTML content within the container for each product card
-  }
-
   return (
     <div className="product-card">
       <div className="product-image">
@@ -120,7 +114,7 @@ const Roll = ({
 
       <form action="#">
         {" "}
-        {/* form to take user input before adding to the cart */}
+        {/*form to take user input before adding to the cart*/}
         <div className="row-1">
           <label htmlFor="glazing-options">Glazing: </label>
           <select
@@ -181,7 +175,7 @@ const Roll = ({
             className="price"
             id={`price-label-${priceLabelId}`}
           >
-            ${rollPrice}
+            $ {rollPrice}
           </label>
           {/* adding data-index attribute to uniquely identify each 'Add to Cart' button */}
           <button

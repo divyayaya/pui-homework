@@ -113,7 +113,7 @@ nav {
 }
 
 .product-card button {
-  margin: 10px 0px 0px 28px;
+  margin: 10px 0px 0px 24px;
   padding: 0px;
   width: 135px;
   height: 30px;
@@ -190,7 +190,7 @@ nav {
   top: 100px;
   right: 0px;
   opacity: 0;
-  /*initial state of the popup is hidden and invisible*/
+  /* initial state of the popup is hidden and invisible */
   background-color: white;
 }
 
@@ -207,12 +207,12 @@ h3 {
 }
 
 #popup.visible {
-  /*makes popup visble after adding to cart*/
+  /* makes popup visible after adding to cart */
   opacity: 1;
 }
 
 #popup.hidden {
-  /*hides the popup from view*/
+  /* hides the popup from view */
   opacity: 0;
   display: none;
 }
