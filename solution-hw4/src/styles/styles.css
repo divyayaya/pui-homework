@@ -58,7 +58,7 @@ nav {
 #number-of-items {
   font-weight: normal;
   font-size: small;
-  margin: 5px 45px;
+  margin: 5px 25px;
   position: absolute;
   top: 95px;
   right: 0px;
@@ -67,7 +67,7 @@ nav {
 #total-cart-value {
   font-weight: normal;
   font-size: small;
-  margin: 8px 43px;
+  margin: 8px 25px;
   position: absolute;
   top: 110px;
   right: 0px;
