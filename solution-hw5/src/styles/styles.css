@@ -35,6 +35,13 @@ a {
   display: inline-block;
 }
 
+h5 {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+  padding: 20px;
+  margin: 30px;
+}
 #motto h1 {
   font-weight: lighter;
   padding: 20px;
@@ -135,7 +142,8 @@ nav {
   height: 20px;
 }
 
-#glazing-options {
+#glazing-options,
+#sort-by-menu {
   width: 133px;
   margin: 10px 10px 0px 18px;
 }
@@ -206,4 +214,116 @@ h3 {
   /* hides the popup from view */
   opacity: 0;
   display: none;
+}
+
+#cart-pricing {
+  font-weight: bold;
+  font-size: small;
+  margin: 10px 0px 0px 0px;
+}
+
+#cart-pack,
+#cart-glaze,
+#cart-roll-type {
+  font-weight: normal;
+  font-size: small;
+  margin: 0px;
+}
+
+#cart-image {
+  width: 100px;
+  border: solid 2px;
+  margin: 60px 0px 0px 0px;
+}
+
+.cart-card {
+  flex: 1 0;
+  padding: 20px;
+  margin: 40px;
+}
+
+.cart-heading {
+  display: flex;
+}
+.the-cart {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 0px;
+  padding: 10px;
+  border-top: solid 10px #785451;
+  border-bottom: solid 10px #785451;
+  width: 100%;
+  max-width: 1200px;
+  height: fit-content;
+  flex-wrap: wrap;
+}
+
+.cart-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.cart-heading h1 {
+  font-size: 24px;
+}
+
+.cart-items {
+  display: flex;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+.cart-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  width: 100px;
+  margin: 40px;
+}
+
+#cart-image {
+  width: 150px;
+  height: 150px;
+}
+
+#cart-roll-type,
+#cart-glaze,
+#cart-pack {
+  margin: 5px 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+#cart-pricing {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+#search-term {
+  margin: 20px 0px 5px 20px;
+  width: 200px;
+}
+
+#sort-by-label {
+  margin: 5px 0px 5px 30px;
+}
+
+#sort-by-menu {
+  margin: 0px;
+}
+
+.empty-cart {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+.cart-card a {
+  margin: 5px;
+  text-decoration: underline;
+  font-size: 14px;
 }

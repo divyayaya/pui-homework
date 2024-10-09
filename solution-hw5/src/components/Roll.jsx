@@ -15,12 +15,13 @@ const Roll = ({
   priceLabelId,
   updateCartStatus,
   cart,
+  setCart,
 }) => {
   const [glazing, setGlazing] = useState("Keep original");
   const [packSize, setPackSize] = useState(1);
   const basePrice = rollPrice;
+  let cartTemporary = [...cart];
   const [totalPrice, setTotalPrice] = useState(basePrice);
-  const [radioColor, setRadioColor] = useState("rgb(191, 191, 191)");
   //storing price change for glazing options
   const glazingOptions = [
     { label: "Keep original", priceChange: 0 },
@@ -37,10 +38,16 @@ const Roll = ({
     { size: 12, multiplier: 10 },
   ];
 
-  const radioStyle = {
-    //changing the background color to grey when an the pack size is selected
-    backgroundColor: radioColor,
-    display: none,
+  //conditional styling
+  const radioStyle = () => ({
+    display: "none",
+  });
+
+  const radioLabelStyle = (size) => {
+    return {
+      backgroundColor:
+        packSize === size ? "rgb(191,191,191)" : "rgb(255,255,255)", //modifying color for selected pack size
+    };
   };
 
   //event handler for when glazing option is changed
@@ -49,15 +56,15 @@ const Roll = ({
       (option) => option.label === event.target.value
     );
     setGlazing(selectedGlazing.label);
+    if (packSize === -1) setPackSize(1);
     updatePrice(selectedGlazing.priceChange, packSize); //calculating price change for selected glazing
   };
 
   //event handler for when pack size option is changed
   const handlePackSizeChange = (event) => {
     const selectedPack = parseInt(event.target.value);
-
-    setRadioColor("rgb(191, 191, 191)");
     setPackSize(selectedPack);
+    if (packSize === -1) setPackSize(1);
     const selectedGlazing = glazingOptions.find(
       (option) => option.label === glazing
     );
@@ -79,13 +86,25 @@ const Roll = ({
 
   //event handler for when 'Add to Cart' button is clicked
   const handleAddToCart = () => {
+    if (packSize === -1) setPackSize(1);
     pushToCart(rollType, glazing, packSize, totalPrice);
   };
 
   function pushToCart(type, glaze, pack, price) {
+    cartTemporary = [...cart];
     displayPopup(type, glaze, pack, price);
     updateCartStatus(price);
-    cart.push({ type, glaze, pack, price }); //pushing the Roll configuration to a list storing cart items
+    const pushRoll = {
+      rollIndex: Date.now(),
+      rollType: type,
+      rollGlaze: glaze,
+      rollPack: pack,
+      rollPrice: price,
+      rollImage: imageSource,
+      rollAltText: imageAltText,
+    };
+    cartTemporary.push(pushRoll); //pushing the Roll configuration to a list storing cart items
+    setCart(cartTemporary);
   }
 
   function displayPopup(rollType, glazing, packSize, totalPrice) {
@@ -153,36 +172,60 @@ const Roll = ({
             name={`${packSizeSet}-pack-size`}
             value="1"
             onChange={handlePackSizeChange}
-            style={radioStyle}
+            style={radioStyle()}
           />
-          <label htmlFor={`${packSizeID}-1`}>1</label>
+          <label
+            className={`${packSizeID}-1`}
+            htmlFor={`${packSizeID}-1`}
+            style={radioLabelStyle(1)}
+          >
+            1
+          </label>
           <input
             type="radio"
             id={`${packSizeID}-3`}
             name={`${packSizeSet}-pack-size`}
             value="3"
             onChange={handlePackSizeChange}
-            style={radioStyle}
+            style={radioStyle()}
           />
-          <label htmlFor={`${packSizeID}-3`}>3</label>
+          <label
+            className={`${packSizeID}-3`}
+            htmlFor={`${packSizeID}-3`}
+            style={radioLabelStyle(3)}
+          >
+            3
+          </label>
           <input
             type="radio"
             id={`${packSizeID}-6`}
             name={`${packSizeSet}-pack-size`}
             value="6"
             onChange={handlePackSizeChange}
-            style={radioStyle}
+            style={radioStyle()}
           />
-          <label htmlFor={`${packSizeID}-6`}>6</label>
+          <label
+            className={`${packSizeID}-6`}
+            htmlFor={`${packSizeID}-6`}
+            style={radioLabelStyle(6)}
+          >
+            6
+          </label>
           <input
             type="radio"
             id={`${packSizeID}-12`}
             name={`${packSizeSet}-pack-size`}
             value="12"
             onChange={handlePackSizeChange}
-            style={radioStyle}
+            style={radioStyle()}
           />
-          <label htmlFor={`${packSizeID}-12`}>12</label>
+          <label
+            className={`${packSizeID}-12`}
+            htmlFor={`${packSizeID}-12`}
+            style={radioLabelStyle(12)}
+          >
+            12
+          </label>
         </div>
         <div className="row-3">
           {" "}
