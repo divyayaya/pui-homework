@@ -95,7 +95,7 @@ const HomePage = () => {
         totalPrice += item.rollPrice; //calculating total cart price from retrieved cart items
       });
       setTotalCartPrice(totalPrice);
-    }
+    } else localStorage.removeItem("cart");
   }, []);
 
   useEffect(() => {
@@ -117,6 +117,7 @@ const HomePage = () => {
     setCart(newCart);
     setNumberOfItems(numberOfItems - 1);
     setTotalCartPrice(totalCartPrice - removedItem.rollPrice);
+    if (newCart.length === 0) localStorage.removeItem("cart");
   };
   const handleSearch = (boxInput) => {
     let results = rollsData.filter(
