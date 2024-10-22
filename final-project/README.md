@@ -6,13 +6,12 @@
 
 ## Table of Contents
 
-1. [Project Overview](#project-overview)
-2. [Design Sketches](#design-sketches)
-   - [Design 1](#design-1)
-   - [Design 2](#design-2)
-   - [Design 3](#design-3)
-3. [Critique Summary](#critique-summary)
-4. [Feedback Analysis](#feedback-analysis)
+1. [Design Sketches](#design-sketches)
+   - [Disney World Virtual Experience](#disney-world-virtual-experience)
+   - [CrowdAware](#crowdaware)
+   - [Rāga](#rāga)
+2. [Critique Summary](#critique-summary)
+3. [Feedback Analysis](#feedback-analysis)
 
 ---
 
