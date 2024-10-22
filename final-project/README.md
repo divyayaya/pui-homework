@@ -20,8 +20,10 @@
 
 ### Disney World Virtual Experience
 
-![Disney World Virtual Experience Flowchart](../assets/project/fp1-images/IMG_6316.JPG)
-![Disney World Virtual Experience Sketch](../assets/project/fp1-images/IMG_6317.JPG)
+<div style="display: flex; justify-content: space-between;">
+  <img src="../assets/project/fp1-images/IMG_6316.JPG" alt="Disney World Virtual Experience Flowchart" width="45%" />
+  <img src="../assets/project/fp1-images/IMG_6317.JPG" alt="Disney World Virtual Experience Sketch" width="45%" />
+</div>
 
 **Design Description**: Experience Disney World right at the comfort of your homes by engaging in a wide range of park attractions alongside Disney characters.
 
@@ -34,8 +36,10 @@
 
 ### CrowdAware
 
-![CrowdAware Flowchart](../assets/project/fp1-images/IMG_6318.JPG)
-![CrowdAware Sketch](../assets/project/fp1-images/IMG_6319.JPG)
+<div style="display: flex; justify-content: space-between;">
+  <img src="../assets/project/fp1-images/IMG_6318.JPG" alt="CrowdAware Flowchart" width="45%" />
+  <img src="../assets/project/fp1-images/IMG_6319.JPG" alt="CrowdAware Sketch" width="45%" />
+</div>
 
 **Design Description**: Unsensationalized and authentic crowdsourced news updates that are verified across multiple sources
 
@@ -48,8 +52,10 @@
 
 ### Rāga
 
-![Rāga Flowchart](../assets/project/fp1-images/IMG_6320.JPG)
-![Rāga Sketch](../assets/project/fp1-images/IMG_6321.JPG)
+<div style="display: flex; justify-content: space-between;">
+  <img src="../assets/project/fp1-images/IMG_6320.JPG" alt="Rāga Flowchart" width="45%" />
+  <img src="../assets/project/fp1-images/IMG_6321.JPG" alt="Rāga Sketch" width="45%" />
+</div>
 
 **Design Description**: Visualize the notes and melodies of Carnatic classical music through color, shape and movement
 
