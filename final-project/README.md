@@ -36,7 +36,7 @@
   <img src="../assets/project/fp1-images/IMG_6316.JPG" alt="CrowdAware Flowchart" width="45%" />
   <img src="../assets/project/fp1-images/IMG_6318.JPG" alt="CrowdAware Sketch" width="45%" />
 
-**Design Description**: Unsensationalized and authentic crowdsourced news updates that are verified across multiple sources
+**Design Description**: Un-sensationalized and authentic crowdsourced news updates that are verified across multiple sources
 
 - **Motivation**: Mainstream news coverage is often agenda-based and sides with one side of the story. By enabling users to undertake the role of journalists, crowdsourced news can reflect the true sentiment of users across different geographies and backgrounds. This will help uncover "hidden" details and make users more aware of their surroundings.
 - **Interactivity and Engagement**: By leveraging Twitter API and Reddit API, public opinion and sentiment can be gauged. Data can be visualized using interactive dashboards that enable real-time news monitoring. News accuracy can be displayed for each contributed article by verifying across multiple sources.
@@ -54,7 +54,7 @@
 
 - **Motivation**: As a Carnatic vocalist, I have often found it difficult to memorize the positions of musical notes in a rendition while learning to sing it for the first time. This was until I learned the art of complimenting music with rhythm - moving my hands to the beat to register small intricacies that make classical music stand out. By combining audio and visual cues, learning classical music can be made easier.
 - **Interactivity and Engagement**: Tone.js can be used to synthesize audio renditions and P5.js can be used to create movement on screen through colorful and dynamic visualizations that respond to the music played as we progress from one note to the next.
-- **Accessibility**: Measures will include providing users with a choice of different color palettes that align with their nature of color sensitivity. Visualizations must also prevent hight photosensitivity that may trigger seizures in people with photosensitive epilepsy or other photo sensitivities. Screen reader compatibility must be ensured by using semantic HTML.
+- **Accessibility**: Measures will include providing users with a choice of different color palettes that align with their nature of color sensitivity. Visualizations must also prevent high photosensitivity that may trigger seizures in people with photosensitive epilepsy or other photo sensitivities. Screen reader compatibility must be ensured by using semantic HTML.
 - **Information to Include**: Various Carnatic song choices, list of musical notes included, visualization of note progression data with timestamps
 
 ---
