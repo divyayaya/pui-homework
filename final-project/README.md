@@ -124,9 +124,9 @@ Through Rāga, singers can easily visualize the notes and melodies of Carnatic c
 
 ## High-Fi Prototypes
 
-[Link to Figma prototypes] (https://www.figma.com/proto/P1LRM2TZJ3l0EcP0fbxnzD/R%C4%81ga?page-id=0%3A1&node-id=1-2&node-type=canvas&viewport=377%2C290%2C0.12&t=d5261rd54I0MPl9m-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2&hotspot-hints=0)
+[Link to Figma prototypes](https://www.figma.com/proto/P1LRM2TZJ3l0EcP0fbxnzD/R%C4%81ga?page-id=0%3A1&node-id=1-2&node-type=canvas&viewport=377%2C290%2C0.12&t=d5261rd54I0MPl9m-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2&hotspot-hints=0)
 
-[Link to demo video clip] (https://drive.google.com/file/d/185hIDpxbwPyMlNPqxgtph_Ygsj17f5yx/view?usp=sharing)
+[Link to demo video clip](https://drive.google.com/file/d/185hIDpxbwPyMlNPqxgtph_Ygsj17f5yx/view?usp=sharing)
 
 ### _Prototype 1_
 
