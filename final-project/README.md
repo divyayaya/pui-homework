@@ -140,15 +140,13 @@ This prototype clearly communicated its purpose to the users. It drew their atte
 
 The second prototype caused visible confusion among users. They were unsure of how to interact with the elements on the screen. One notable piece of feedback from a user emphasized the need for more information about musical notes for novice users.
 
-…
-
 ## Usability Test
 
 - **Target Users**: Singers, musicians
 - **Goals**:
 
   1. Understand which information is critical to aid target users’ learning process
-  2. Determine if the labelling of the interface intuitive for new users?
+  2. Determine if the labelling of the interface intuitive for new users
 
 - **Method**: Think-Aloud Protocol
 - **Tasks/Questions**:
@@ -194,20 +192,20 @@ A common piece of feedback I received during the lab session included scoping do
 - [ ] Week 11 Nov 11 \- Nov 15:
   - [ ] FP3 presentation
   - [ ] Interpret notes from critique in the lab session
-  - [ ] **Checkpoint** test for accessibility of webpages
+  - [ ] **Checkpoint** - test for accessibility of webpages
   - [ ] Implement changes based on user feedback
   - [ ] Designing template for visualization of notes using P5.js
   - [ ]Determining color palettes
 - [ ] Week 12 Nov 18 \- Nov 22:
   - [ ] Implement interactivity using haptic feedback
   - [ ] Check for responsiveness on multiple screen sizes
-  - [ ] **Checkpoint** test for accessibility of webpages
+  - [ ] **Checkpoint** - test for accessibility of webpages
   - [ ] Implement changes based on user feedback
   - [ ] Experiment with color palettes to communicate mood/genre
 - [ ] Week 13 Nov 25 \- Nov 29:
   - [ ] Run usability tests with target users
   - [ ] Debrief and interpret notes from usability tests
-  - [ ] **BREAK** Thanksgiving
+  - [ ] **BREAK** - Thanksgiving
 - [ ] Week 14 Dec 2 \- Dec 6:
   - [ ] Implement changes based on user feedback
   - [ ] FP4 due
