@@ -119,77 +119,124 @@ Remember to keep track of your prompts and usage for [FP4 writeup](#part-6-gener
 
 ## Project Description
 
-Briefly restate your motivation and a short description of your project.
+As a Carnatic vocalist, I have often found it difficult to memorize the positions of musical notes in a rendition while learning to sing it for the first time. This was until I learned the art of complimenting music with rhythm - moving my hands to the beat to register small intricacies that make classical music stand out. By combining audio and visual cues, learning classical music can be made easier.
+Through Rāga, singers can easily visualize the notes and melodies of Carnatic classical music through color, shape and movement.
 
 ## High-Fi Prototypes
 
+[Link to Figma prototypes] (https://www.figma.com/proto/P1LRM2TZJ3l0EcP0fbxnzD/R%C4%81ga?page-id=0%3A1&node-id=1-2&node-type=canvas&viewport=377%2C290%2C0.12&t=d5261rd54I0MPl9m-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2&hotspot-hints=0)
+
+[Link to demo video clip] (https://drive.google.com/file/d/185hIDpxbwPyMlNPqxgtph_Ygsj17f5yx/view?usp=sharing)
+
 ### _Prototype 1_
 
-![title for prototype1](images/prototype1.png)
+![Song Catalog showing selection of various Carnatic renditions](../assets/project/fp2-images/InitialPrototype1.png)
 
-A brief description and summary of the user feedback (\<100 words, 2 images)
+This prototype clearly communicated its purpose to the users. It drew their attention to its variety of cover images, with users noting the visible hierarchy of information through different font sizes. Users intuitively clicked on the cover image card to navigate to the song.
 
 ### _Prototype 2_
+
+![Visualization of musical notes on a curve](../assets/project/fp2-images/InitialPrototype2.png)
+
+The second prototype caused visible confusion among users. They were unsure of how to interact with the elements on the screen. One notable piece of feedback from a user emphasized the need for more information about musical notes for novice users.
 
 …
 
 ## Usability Test
 
-Discuss the user feedback you got during the evaluation / usability test (\~300 words). Indicate which feedback you implemented, inspired new directions, or otherwise influenced your final design.
+- **Target Users**: Singers, musicians
+- **Goals**:
+
+  1. Understand which information is critical to aid target users’ learning process
+  2. Determine if the labelling of the interface intuitive for new users?
+
+- **Method**: Think-Aloud Protocol
+- **Tasks/Questions**:
+
+  1. What do you think the purpose of this tool is?
+  2. As you browse through the song catalog, what do you observe?
+  3. What do you suppose the next step is for utilizing the tool?
+  4. How might you interact with the visualization page?
+  5. If you wanted to go back to viewing the song catalog, how would you accomplish this?
+
+- **Summary**: The first prototype encouraged users to explore the music catalog, successfully achieving its purpose through intuitive buttons and card interactions. The second prototype, however, played the role of a static screen after the first interaction, confusing the users about the next possible steps and their interpretation of the information presented. This inspired me to redesign the second prototype to enable higher interactivity and clarity in the information presented.
 
 ## Updated Designs
 
-Show screenshots of your updated design based on the user feedback (\<100 words, \~2 images).
+![Improved interactivity in the visualization page](../assets/project/fp2-images/UpdatedDesign1.png)
+
+![Enhancing navigation using buttons on the visualization page](../assets/project/fp2-images/UpdatedDesign2.png)
+
+To enhance interactivity, I prompted users to drag the ball on-screen along the predetermined path with musical notes as milestones. This encourages kinesthetic learning and actively engages the users. For beginners, I included introductory information about the musical notation used. Additionally, to enhance the users’ sense of freedom and control, I added navigation buttons to move between musical notes and pages.
 
 ## Feedback Summary
 
-Summarize the feedback you received in the lab session and discuss how it influenced your design (\~300 words).
+A common piece of feedback I received during the lab session included scoping down by selecting one prototype and adding more interactivity to that. Secondly, a peer suggested adding features to allow users to navigate between pages seamlessly. Additionally, emphasizing the benefits of practicing singing through this method can help reinforce the idea of it.
 
 ## Milestones
 
-Outline weekly milestones to plan your expected implementation progress until the end of the semester (\~300 words).
-
 ### _Implementation Plan_
 
-- [ ] Week 9 Oct 28 \- Nov 1:
+- [x] Week 9 Oct 28 \- Nov 1:
   - [x] FP1 due
-  - [ ] ...
+  - [x] Create static pages on Figma for the lab session
+  - [x] Interpret notes from critique in the lab session
+  - [x] Create dynamic high-fi prototypes on Figma
+  - [x] Create usability test plan
 - [ ] Week 10 Nov 4 \- Nov 8:
-
-  - [ ] FP2 due
-
+  - [x] Run usability tests on two users
+  - [x] Debrief and interpret notes from usability tests
+  - [x] Update design on Figma
+  - [x] FP2 due
+  - [ ] Defining HTML/CSS for landing page
+  - [ ] Integrating song catalog using APIs
+  - [ ] Creating interactive music play feature
 - [ ] Week 11 Nov 11 \- Nov 15:
+  - [ ] FP3 presentation
+  - [ ] Interpret notes from critique in the lab session
+  - [ ] **Checkpoint** test for accessibility of webpages
+  - [ ] Implement changes based on user feedback
+  - [ ] Designing template for visualization of notes using P5.js
+  - [ ]Determining color palettes
 - [ ] Week 12 Nov 18 \- Nov 22:
+  - [ ] Implement interactivity using haptic feedback
+  - [ ] Check for responsiveness on multiple screen sizes
+  - [ ] **Checkpoint** test for accessibility of webpages
+  - [ ] Implement changes based on user feedback
+  - [ ] Experiment with color palettes to communicate mood/genre
 - [ ] Week 13 Nov 25 \- Nov 29:
-
-  - [ ] Thanksgiving
-
+  - [ ] Run usability tests with target users
+  - [ ] Debrief and interpret notes from usability tests
+  - [ ] **BREAK** Thanksgiving
 - [ ] Week 14 Dec 2 \- Dec 6:
+  - [ ] Implement changes based on user feedback
   - [ ] FP4 due
 
 ### _Libraries and Other Components_
 
-List the JS libraries and other components (if applicable) that you plan to use.
-
--
+- **Tone.js** for synthesizing audio renditions
+- **P5.js** to create movement on-screen through colorful and dynamic visualizations
+- **Web Speech API** for text-to-speech support for users with low vision
+- **D3.js** to add large, descriptive labels for elements on-screen for users with low vision
+- **Chroma.js** to determine accessible color palettes for colorblind users
 
 ## Generative AI Use Plan
 
-Outline how you plan to use Generative AI tools to aid in the implementation (\~300 words).
-
 ### _Tool Use_
 
-What would you use? Edit the list given your plan. For each tool, explain briefly on what do you expect Generative AI to help you with and what might it not be able to help you with.
-
 - ChatGPT
-  - I will use it for … because it can help me …
-  - I will not use it for … because it might not be able to help me with …
+  - I will use it for suggestions on APIs to use because it can help me align the search for APIs with the context of my project
+  - I will not use it for defining waveforms for tactile interactivity because it might not be able to help me with accurately defining hand movements based on the progression of musical notes
 - GitHub Copilot
-- ...
+  - I will use it to create test cases for unit testing and integration testing because it can help power my code by accounting for edge cases
+  - I will not use it for coding components because it might limit my ability as a programmer and designer
+- Perplexity.ai
+  - I will use it as a secondary research assistant because it can help me quickly sift through broad insights from multiple white papers to inform my design
+  - I will not use it for determining Indian classical musical notations because it might produce inauthentic results
 
 ### _Responsible Use_
 
-How would you use Generative AI responsibly?
+Although I will cite the use of Generative AI in all instances within my project, I will not use it to generate standalone ideas to implement within the project nor will I use it to generate code. Additionally, I will critically review the results generated by it and further prompt or probe it to ensure that algorithmic bias does not creep into its suggestions.
 
 ---
 
