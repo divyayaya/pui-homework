@@ -57,17 +57,15 @@ body {
   height: 50px; /* Adjust this value as needed */
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.swiper-button-prev {
   position: absolute;
   top: 50%;
-}
-
-.swiper-button-prev {
   left: 0;
 }
 
 .swiper-button-next {
+  position: absolute;
+  top: 50%;
   right: 0;
 }
 
