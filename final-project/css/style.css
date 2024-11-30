@@ -15,6 +15,17 @@ body {
   margin: 0;
   padding: 0;
 }
+.selection-instructions {
+  display: flex;
+  height: 140px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+  margin: 50px 150px;
+}
 
 .swiper {
   width: 100%;

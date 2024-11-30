@@ -29,9 +29,12 @@ body {
 }
 
 .path-1 {
-  margin-left: 0;
+  position: relative;
+  width: 136.92px;
+  height: 63.41px;
 }
 .path-2 {
+  position: relative;
   width: 700px;
 }
 
@@ -79,4 +82,88 @@ body {
 
 .swiper-slide {
   font-size: 32px;
+}
+
+#motion-path-1 {
+  position: absolute;
+  top: 0;
+  margin-left: 40px;
+  offset-path: path(
+    "M1.6808 65.4176C26.4906 65.4176 51.6101 60.7089 74.5436 50.2846C84.2073 45.892 94.2055 41.85 103.929 37.3935C110.948 34.1763 115.257 28.0705 122.025 25.0628C125.565 23.4893 130.212 15.7129 131.393 12.1717C132.572 8.63324 136.912 5.3767 138.599 2.00293"
+  );
+  animation: move 3000ms infinite ease-in-out;
+  width: 20px;
+  height: 20px;
+  background: cyan;
+  border-radius: 50%;
+  visibility: hidden;
+}
+
+#motion-path-2 {
+  position: absolute;
+  top: 0;
+  margin-left: 250px;
+  offset-path: path(
+    "M2.18872 88.6794C21.2608 88.6794 39.8409 92.9602 58.4773 86.4375C75.7716 80.3845 88.6059 71.4316 104.517 63.0573C116.118 56.9514 129.881 44.9009 136.945 33.9122C141.1 27.4493 146.967 20.9259 152.078 15.176C154.751 12.1684 157.79 3.67242 160.725 2.20483"
+  );
+  animation: move 3000ms infinite ease-in-out;
+  width: 20px;
+  height: 20px;
+  background: cyan;
+  border-radius: 50%;
+  visibility: hidden;
+}
+
+#motion-path-3 {
+  position: absolute;
+  margin-top: -100px;
+  margin-left: 450px;
+  offset-path: path(
+    "M2.34412 92.2912C2.34412 73.6859 13.6616 73.7675 24.6834 62.7458C41.1848 46.2444 67.4601 32.5019 90.2599 27.4353C101.584 24.9188 112.88 18.2427 124.53 17.3466C128.015 17.0785 139.13 14.662 141.824 12.7026C150.731 6.22517 164.586 6.12605 173.852 1.49292"
+  );
+  animation: move 3000ms infinite ease-in-out;
+  width: 20px;
+  height: 20px;
+  background: cyan;
+  border-radius: 50%;
+  visibility: hidden;
+}
+
+#motion-path-4 {
+  position: absolute;
+  margin-top: -105px;
+  margin-left: 650px;
+  offset-path: path(
+    "M2.26672 88.4043C30.0718 88.4043 59.4026 84.6728 84.4176 71.4296C96.7675 64.8914 112.603 60.5311 123.331 50.9319C127.483 47.217 134.948 45.0954 137.744 40.2027C139.72 36.7447 147.253 32.598 150.715 30.4343C159.896 24.6958 164.92 10.9915 169.451 1.92969"
+  );
+  animation: move 3000ms infinite ease-in-out;
+  width: 20px;
+  height: 20px;
+  background: cyan;
+  border-radius: 50%;
+  visibility: hidden;
+}
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.audio-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+audio {
+  width: 1000px;
 }

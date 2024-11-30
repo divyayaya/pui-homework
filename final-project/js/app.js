@@ -1,14 +1,14 @@
 //an array storing all the song titles
 const songTitles = [
-  "Rāravenu Gopābāla",
-  "Sri Gananātha",
-  "Kunda Gaura",
-  "Kereya Neeranu",
-  "Padumanabha",
-  "Varaveena",
-  "Kamalajādala",
+  "Mohanam",
+  "Kalyāni",
+  "Shankarābharanam",
+  "Malahāri",
+  "Sāveri",
+  "Kamās",
+  "Bhairavi",
 ];
-currentSelection = 0; //to keep track of the song selected
+var currentSelection = 0; //to keep track of the song selected
 document.addEventListener("DOMContentLoaded", function () {
   const currentSelectionText = document.getElementById("current-song");
   var swiper = new Swiper(".mySwiper", {
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //detecting song selection based on card change
   swiper.on("slideChange", function () {
     currentSelection = swiper.activeIndex;
-    currentSelectionText.innerText = songTitles[swiper.activeIndex];
+    currentSelectionText.innerText = songTitles[currentSelection];
     console.log(currentSelection);
   });
 });
