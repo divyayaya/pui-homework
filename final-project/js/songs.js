@@ -9,10 +9,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const audioPlayer = document.getElementById("audioPlayer");
 
   const audioSources = [
-    "./assets/audio/Raravenu_Sa.mp3",
-    "./assets/audio/Raravenu_Ri.mp3",
-    "./assets/audio/Raravenu_Ga.mp3",
-    "./assets/audio/Raravenu_Pa.mp3",
+    "../assets/audio/Raravenu_Sa.mp3",
+    "../assets/audio/Raravenu_Ri.mp3",
+    "../assets/audio/Raravenu_Ga.mp3",
+    "../assets/audio/Raravenu_Pa.mp3",
   ];
 
   if (currentSelection == 0) {
