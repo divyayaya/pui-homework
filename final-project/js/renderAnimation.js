@@ -2,15 +2,27 @@ import { getCurrentSelection } from "./utils.js";
 import { pathData } from "./pathData.js";
 console.log("songs.js loaded");
 const song = pathData[getCurrentSelection()];
+var swiper;
+// Declare a Promise for Swiper initialization
+var resolveSwiper;
+export const swiperPromise = new Promise((resolve) => {
+  resolveSwiper = resolve;
+});
 document.addEventListener("DOMContentLoaded", function () {
-  var swiper = new Swiper(".mySwiper", {
+  const noteDescription = document.querySelector(".swiper-wrapper");
+  noteDescription.innerHTML = `
+              <div class="swiper-slide"><h1>${song.notes[0]}</h1></div>
+              <div class="swiper-slide"><h1>${song.notes[1]}</h1></div>
+              <div class="swiper-slide"><h1>${song.notes[2]}</h1></div>
+              <div class="swiper-slide"><h1>${song.notes[3]}</h1></div>
+            
+          `;
+  swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: 1,
     spaceBetween: 30,
-    pagination: false, //disabling the pagination progress dots
-    // for accessibility purposes: keyboard navigation enbaled
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
@@ -19,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
       enabled: true,
     },
   });
+  resolveSwiper(swiper);
   const pathVisualization = document.querySelector(".animated-notes");
   console.log(pathVisualization);
   pathVisualization.innerHTML = `<div class="path-4">
@@ -37,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
               stroke-linecap="round"
             />
 
-            <text x="180" y="12" fill="white" font-size="15">${song.notes[3]}</text>
+            <text x="140" y="12" fill="white" font-size="15">${song.notes[3]}</text>
             Sorry, your browser does not support inline SVG.
           </svg>
           <div id="motion-path-4"></div>
@@ -58,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
               stroke-linecap="round"
             />
 
-            <text x="180" y="12" fill="white" font-size="15">${song.notes[2]}</text>
+            <text x="140" y="12" fill="white" font-size="15">${song.notes[2]}</text>
             Sorry, your browser does not support inline SVG.
           </svg>
           <div id="motion-path-3"></div>
@@ -79,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
               stroke-linecap="round"
             />
 
-            <text x="180" y="12" fill="white" font-size="15">${song.notes[1]}</text>
+            <text x="150" y="12" fill="white" font-size="15">${song.notes[1]}</text>
             Sorry, your browser does not support inline SVG.
           </svg>
           <div id="motion-path-2"></div>
@@ -99,7 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
               stroke-linecap="round"
             />
 
-            <text x="170" y="12" fill="white" font-size="15">${song.notes[0]}</text>
+            <text x="160" y="12" fill="white" font-size="15">${song.notes[0]}</text>
             Sorry, your browser does not support inline SVG.
           </svg>
           <div id="motion-path-1"></div>

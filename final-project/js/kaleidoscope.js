@@ -6,16 +6,17 @@ let button;
 var minAmplitude = 80;
 var maxAmplitude = 800;
 let amplitudeHistory = []; //an array to store the amplitude values
+let songNumber;
 
-//storing the paths to all songs in a single array
+//storing the paths to all audio sources in a single array
 const songSources = [
-  "../assets/audio/Mohanam.mp3",
-  "../assets/audio/Kalyani.mp3",
-  "../assets/audio/Shankarabharanam.mp3",
-  "../assets/audio/Malahari.mp3",
-  "../assets/audio/Saveri.mp3",
-  "../assets/audio/Kamas.mp3",
-  "../assets/audio/Bhairavi.mp3",
+  "../assets/audio/Rāgās/Mohanam.mp3",
+  "../assets/audio/Rāgās/Kalyani.mp3",
+  "../assets/audio/Rāgās/Shankarabharanam.mp3",
+  "../assets/audio/Rāgās/Malahari.mp3",
+  "../assets/audio/Rāgās/Saveri.mp3",
+  "../assets/audio/Rāgās/Kamas.mp3",
+  "../assets/audio/Rāgās/Bhairavi.mp3",
 ];
 
 window.preload = preload;
@@ -32,7 +33,7 @@ function toggleSong() {
 }
 
 function preload() {
-  const songNumber = getCurrentSelection();
+  songNumber = getCurrentSelection();
   console.log(songNumber);
   song = loadSound(songSources[songNumber]); //retrieving the song based on the selection made by the user
 }
@@ -40,11 +41,30 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
-  button = createButton("toggle");
-  button.mousePressed(toggleSong);
-  song.play();
+
+  const audioControls = createButton("Play");
+  audioControls.id("audioControls");
+  audioControls.addClass("pause");
+  audioControls.position(windowWidth / 2, windowHeight - 100); //positioning the button within the canvas
+  audioControls.mouseClicked(() => {
+    if (audioControls.hasClass("pause")) {
+      audioControls.removeClass("pause");
+      audioControls.addClass("play");
+      audioControls.html("Play");
+    } else if (audioControls.hasClass("play")) {
+      audioControls.removeClass("play");
+      audioControls.addClass("pause");
+      audioControls.html("Pause");
+    }
+    toggleSong();
+  });
+
   amp = new p5.Amplitude(); //creating an amplitude object
   fft = new p5.FFT(0, 256); //creating an FFT object
+
+  describe(
+    "a dynamic kaleidoscope that responds to a song by changing its color and form according to frequency and amplitude."
+  );
 }
 
 function draw() {
@@ -78,13 +98,10 @@ function draw() {
         for (let i = 0; i < 360; i++) {
           const freqIndex = i % spectrum.length; // Map angle to frequency index
           const freqValue = spectrum[freqIndex]; // Get frequency value (0-255)
-          const radius = map(
-            amplitudeHistory[i],
-            0,
-            1,
-            minAmplitude,
-            maxAmplitude
-          );
+          const radius =
+            amplitudeHistory[i] !== undefined
+              ? map(amplitudeHistory[i], 0, 1, minAmplitude, maxAmplitude)
+              : minAmplitude; //for unexpected values, assuming minimum amplitude
 
           // Map frequency value to colors
           const r = map(freqValue, 0, 255, 50, 255); // Red intensity

@@ -103,6 +103,23 @@ nav a:hover {
   font-size: 32px;
 }
 
+.button-to-visualize a {
+  display: flex;
+  flex-direction: row;
+  background-color: cyan;
+  color: black;
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 1%;
+}
+.button-to-visualize a:hover {
+  background-color: rgb(51, 0, 170);
+  color: white;
+}
+
 #motion-path-1 {
   position: absolute;
   top: 0;
