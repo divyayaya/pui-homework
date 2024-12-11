@@ -60,7 +60,6 @@ swiperPromise
 
     //playing audio for the note that the user is currently viewing
     audioPlayer.src = audioSources[currentSelection];
-    console.log(audioPlayer.src);
     audioPlayer.play();
 
     //a function to update the audio source and visible animation when user changes note selection
@@ -103,5 +102,5 @@ swiperPromise
     });
   })
   .catch((error) => {
-    console.error("Failed to initialize Swiper in songLoader.js:", error);
+    console.error("Error occured:", error);
   });

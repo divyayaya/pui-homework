@@ -1,12 +1,40 @@
-#audioClayer {
+body {
+  width: 100vw;
+  height: 100vh;
+}
+#audioControlsDiv {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  width: 400px;
   background-color: #333;
-  padding: 10px;
+  padding: 0.625em;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#audioControls {
+  width: 10%;
+  background-color: cyan;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  padding: 1em 2em;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1%;
+  text-align: center;
+}
+#audioControls:hover {
+  background-color: rgb(51, 0, 170);
+  color: white;
+}
+
+@media (max-width: 820px) {
+  #audioControls {
+    width: 20%;
+    font-size: 0.9rem;
+    padding: 0.8em 1.5em;
+  }
 }

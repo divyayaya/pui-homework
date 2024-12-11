@@ -1,6 +1,6 @@
 import { getCurrentSelection } from "./utils.js";
 import { pathData } from "./pathData.js";
-console.log("songs.js loaded");
+
 const song = pathData[getCurrentSelection()];
 var swiper;
 // Declare a Promise for Swiper initialization
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   resolveSwiper(swiper);
   const pathVisualization = document.querySelector(".animated-notes");
-  console.log(pathVisualization);
+
   pathVisualization.innerHTML = `<div class="path-4">
           <svg
             xmlns="http://www.w3.org/2000/svg"

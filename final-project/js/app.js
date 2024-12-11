@@ -17,12 +17,13 @@ document.addEventListener("DOMContentLoaded", function () {
       effect: "coverflow",
       grabCursor: true,
       centeredSlides: true,
-      slidesPerView: "auto",
       rewind: true,
       speed: 500,
       fadeEffect: {
         crossFade: true,
       },
+      slidesPerView: "auto",
+
       coverflowEffect: {
         rotate: 50,
         stretch: 0,
@@ -45,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function () {
     swiper.on("slideChange", function () {
       setCurrentSelection(swiper.activeIndex); //setting current selected song
       currentSelectionText.innerText = songTitles[swiper.activeIndex];
-      console.log(swiper.activeIndex);
     });
   }
 });
