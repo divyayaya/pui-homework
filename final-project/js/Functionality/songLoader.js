@@ -60,6 +60,18 @@ swiperPromise
 
     //playing audio for the note that the user is currently viewing
     audioPlayer.src = audioSources[currentSelection];
+    audioPlayer.addEventListener("play", () => {
+      audioPlayer.setAttribute(
+        "aria-label",
+        "Playing note: ${song.notes[currentSelection]}"
+      );
+    });
+    audioPlayer.addEventListener("pause", () => {
+      audioPlayer.setAttribute(
+        "aria-label",
+        "Paused note: ${song.notes[currentSelection]}"
+      );
+    });
 
     //a function to update the audio source and visible animation when user changes note selection
     swiper.on("slideChange", function () {

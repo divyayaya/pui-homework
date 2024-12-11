@@ -11,7 +11,7 @@ const songTitles = [
 ];
 document.addEventListener("DOMContentLoaded", function () {
   const page = document.title;
-  if (page === "Catalog") {
+  if (page === "Rāgā Catalog") {
     const currentSelectionText = document.getElementById("current-song");
     var swiper = new Swiper(".mySwiper", {
       effect: "coverflow",

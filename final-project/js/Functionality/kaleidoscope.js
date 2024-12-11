@@ -46,6 +46,8 @@ function setup() {
   const audioControls = createButton("Play");
   audioControls.parent(audioControlsDiv);
   audioControls.id("audioControls");
+  audioControls.attribute("aria-label", "Play audio"); //adding ARIA label for better accessibility
+  audioControls.attribute("role", "button"); //specifying the role of the button
   audioControls.addClass("pause");
   //audioControls.position(windowWidth / 2, windowHeight - 100); //positioning the button within the canvas
   audioControls.mouseClicked(() => {
@@ -54,11 +56,19 @@ function setup() {
       song.pause();
       audioControls.addClass("play");
       audioControls.html("Play");
+      audioControls.attribute("aria-label", "Play audio");
     } else if (audioControls.hasClass("play")) {
       audioControls.removeClass("play");
       song.play();
       audioControls.addClass("pause");
       audioControls.html("Pause");
+      audioControls.attribute("aria-label", "Pause audio");
+    }
+  });
+  audioControls.attribute("tabindex", "0"); //to access play/pause button using keyboard
+  audioControls.elt.addEventListener("keypress", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      audioControls.elt.click();
     }
   });
   window.addEventListener("resize", windowResized);
