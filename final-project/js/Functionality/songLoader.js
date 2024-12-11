@@ -1,7 +1,7 @@
 import { getCurrentSelection } from "./utils.js";
-import { pathData } from "./pathData.js";
+import { pathData } from "../Data/pathData.js";
 import { swiperPromise } from "./renderAnimation.js";
-import { noteData } from "./noteData.js";
+import { noteData } from "../Data/noteData.js";
 let currentSelection = 0;
 const audioSources = []; //to store the audio sources matching notes of the rāgā
 let firstAnimation, secondAnimation, thirdAnimation, fourthAnimation;
@@ -60,7 +60,6 @@ swiperPromise
 
     //playing audio for the note that the user is currently viewing
     audioPlayer.src = audioSources[currentSelection];
-    audioPlayer.play();
 
     //a function to update the audio source and visible animation when user changes note selection
     swiper.on("slideChange", function () {

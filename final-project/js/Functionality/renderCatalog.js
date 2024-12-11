@@ -1,4 +1,4 @@
-import { imageData } from "./imageData.js";
+import { imageData } from "../Data/imageData.js";
 document.addEventListener("DOMContentLoaded", function () {
   const swiperWrapper = document.querySelector(".swiper-wrapper");
   let content = ""; // Create an empty string to append HTML content to

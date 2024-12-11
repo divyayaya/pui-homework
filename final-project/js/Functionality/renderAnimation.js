@@ -1,5 +1,5 @@
 import { getCurrentSelection } from "./utils.js";
-import { pathData } from "./pathData.js";
+import { pathData } from "../Data/pathData.js";
 
 const song = pathData[getCurrentSelection()];
 var swiper;

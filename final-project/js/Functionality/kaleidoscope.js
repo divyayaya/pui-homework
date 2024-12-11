@@ -31,12 +31,16 @@ function preload() {
 
 function setup() {
   describe(
-    "A dynamic background which portrays a kaleidoscope at different points in time of a song. The kaleidoscope has 6 segments and responds to the music played by changing its form."
+    "A dynamic background which portrays a kaleidoscope at different points in time of a song. The kaleidoscope has 6 segments and responds to the music played by changing its form.",
+    FALLBACK
   );
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
 
-  describeElement("A button to toggle between playing and pausing music");
+  describeElement(
+    "button",
+    "A button to toggle between playing and pausing music"
+  );
   const audioControlsDiv = createDiv("");
   audioControlsDiv.id("audioControlsDiv");
   const audioControls = createButton("Play");
@@ -91,7 +95,7 @@ function getCoordinates() {
 function draw() {
   window.addEventListener("resize", windowResized);
   const { currentX: xPositions, currentY: yPositions } = getCoordinates();
-  describeElement("A black background.");
+  describeElement("Background", "A black background.");
   background(0);
   let amplitude = amp.getLevel();
   var spectrum = fft.analyze();
@@ -101,7 +105,8 @@ function draw() {
   noFill();
   let numSegments = 6; //Number of kaleidoscope segments
   describe(
-    "The kaleidoscope segments begin as 6 circles which transform according to changes in frequency and amplitude of the music."
+    "The kaleidoscope segments begin as 6 circles which transform according to changes in frequency and amplitude of the music.",
+    FALLBACK
   );
   for (let i = 0; i < numSegments; i++) {
     for (let j = 0; j < 3; j++) {
