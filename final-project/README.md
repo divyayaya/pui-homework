@@ -60,7 +60,7 @@ For the following aspects of your project, edit the corresponding table cell to 
 
 - It matched my expectations and plan in [FP2](#generative-ai-use-plan) in that Gemini helped me quickly sift through a number of Javascript libraries and frameworks to suggest the most appropriate one for the context of my project.
 
--It matched my expectations and plan in [FP2](#generative-ai-use-plan) in that I did not use Gemini to create curves and path progressions between various musical notes since it did not allow me to customize them and ignored minute nuances.
+- It matched my expectations and plan in [FP2](#generative-ai-use-plan) in that I did not use Gemini to create curves and path progressions between various musical notes since it did not allow me to customize them and ignored minute nuances.
 
 - It matched my expectations and plan in [FP2](#generative-ai-use-plan) in that I did not use Gemini to generate standalone ideas to implement within the project.
 
