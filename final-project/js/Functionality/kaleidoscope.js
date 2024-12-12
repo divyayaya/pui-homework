@@ -2,7 +2,7 @@ import { getCurrentSelection } from "./utils.js";
 let song;
 let amp;
 let fft;
-let button;
+
 var minAmplitude = 80;
 var maxAmplitude = 800;
 let amplitudeHistory = []; //an array to store the amplitude values
@@ -49,7 +49,7 @@ function setup() {
   audioControls.attribute("aria-label", "Play audio"); //adding ARIA label for better accessibility
   audioControls.attribute("role", "button"); //specifying the role of the button
   audioControls.addClass("pause");
-  //audioControls.position(windowWidth / 2, windowHeight - 100); //positioning the button within the canvas
+
   audioControls.mouseClicked(() => {
     if (audioControls.hasClass("pause")) {
       audioControls.removeClass("pause");
