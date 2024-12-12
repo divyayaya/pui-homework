@@ -23,11 +23,11 @@ Through my website Rāga, singers can easily visualize the notes and melodies of
 2. **P5.js**
    - P5.js helped me explore creative coding in the realm of 2D visualizations. Through P5.sound, it also incorporates the audio data into its visualizations which gave me more flexibility by using a single library.
    - I used P5.js to record the frequency and amplitude values of different audio sources. I then mapped these data values to create a waveform with varying thicknesses.
-   - This helped me add dynamism to the visuals on my website and make it responsive to the window’s width and height. It also ensures accessibility for users with disabilities through its the describe() and describeElement() functions.
+   - This helped me add dynamism to the visuals on my website and make it responsive to the window’s width and height. It also ensures accessibility for users with disabilities through its describe() and describeElement() functions.
 
 ## Part 4: Design Iteration
 
-Similar to the FP2 design, I added navigation buttons to move between musical notes and pages to enhance the users’ sense of freedom and control. Emphasizing accessibility, I decided not to implement a drag-the-ball along-the-path interaction on the Path Visualizer page. I implemented a responsive carousel effect for selecting options on both the landing page (Rāgā Catalog) and the Path Visualizer page. In this iteration, I went beyond my initial scope and implemented a P5.js canvas for visualizing music for augmenting hearing-impaired users.
+During FP2, I designed two screens on Figma intending to test them to understand which information is critical to aid target users’ learning process and determine if the labeling of the interface is intuitive for new users. The first screen encouraged users to explore the music catalog, successfully achieving its purpose through intuitive buttons and card interactions. The second screen was, however, static after the first interaction, confusing the users about the next possible steps and their interpretation of the information presented. In an attempt to improve the design before implementation, I added navigation buttons to move between musical notes and pages to enhance the users’ sense of freedom and control. Emphasizing accessibility, I decided not to implement a drag-the-ball along-the-path interaction on the Path Visualizer page. I implemented a responsive carousel effect for selecting options on both the landing page (Rāgā Catalog) and the Path Visualizer page. In this iteration, I went beyond my initial scope and implemented a P5.js canvas for visualizing music for augmenting hearing-impaired users.
 
 ## Part 5: Implementation Challenge
 
@@ -177,7 +177,7 @@ The second prototype caused visible confusion among users. They were unsure of h
 - **Goals**:
 
   1. Understand which information is critical to aid target users’ learning process
-  2. Determine if the labelling of the interface intuitive for new users
+  2. Determine if the labeling of the interface intuitive for new users
 
 - **Method**: Think-Aloud Protocol
 - **Tasks/Questions**:
